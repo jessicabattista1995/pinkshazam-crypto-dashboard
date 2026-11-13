@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Page chrome outside the React tree. Component colors live in src/App.tsx (design tokens `C`). */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b0d13;
+  color: #e7e9f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tailwind 4 leaves buttons with the default cursor; the dashboard expects a pointer on anything clickable. */
+button:not(:disabled),
+[role="button"],
+select {
+  cursor: pointer;
+}
